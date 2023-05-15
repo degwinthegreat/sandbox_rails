@@ -88,6 +88,7 @@ GEM
       reline (>= 0.3.0)
     jsbundling-rails (1.1.1)
       railties (>= 6.0.0)
+    language_server-protocol (3.17.0.3)
     loofah (2.21.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -116,6 +117,7 @@ GEM
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     pg (1.5.3)
+    prettier_print (1.2.1)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.2)
@@ -153,6 +155,11 @@ GEM
     rake (13.0.6)
     reline (0.3.3)
       io-console (~> 0.5)
+    ruby-lsp (0.5.1)
+      language_server-protocol (~> 3.17.0)
+      sorbet-runtime
+      syntax_tree (>= 6.1.1, < 7)
+    sorbet-runtime (0.5.10826)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -162,6 +169,8 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    syntax_tree (6.1.1)
+      prettier_print (>= 1.2.0)
     thor (1.2.2)
     timeout (0.3.2)
     turbo-rails (1.4.0)
@@ -192,6 +201,7 @@ DEPENDENCIES
   puma
   rack-mini-profiler
   rails
+  ruby-lsp
   sprockets-rails
   stimulus-rails
   turbo-rails
