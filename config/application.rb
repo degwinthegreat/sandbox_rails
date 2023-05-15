@@ -33,5 +33,7 @@ module SandboxRails
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.active_support.isolation_level = :fiber
   end
 end
