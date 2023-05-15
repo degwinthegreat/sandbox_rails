@@ -97,6 +97,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    ast (2.4.2)
     async (2.5.1)
       console (~> 1.10)
       io-event (~> 1.1)
@@ -159,6 +160,7 @@ GEM
       reline (>= 0.3.0)
     jsbundling-rails (1.1.1)
       railties (>= 6.0.0)
+    json (2.6.3)
     language_server-protocol (3.17.0.3)
     localhost (1.1.10)
     loofah (2.21.2)
@@ -189,6 +191,9 @@ GEM
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     openssl (3.1.0)
+    parallel (1.23.0)
+    parser (3.2.2.1)
+      ast (~> 2.4.1)
     pg (1.5.3)
     prettier_print (1.2.1)
     process-metrics (0.2.1)
@@ -220,13 +225,38 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.5.0)
       loofah (~> 2.19, >= 2.19.1)
+    rainbow (3.1.1)
     rake (13.0.6)
+    regexp_parser (2.8.0)
     reline (0.3.3)
       io-console (~> 0.5)
+    rexml (3.2.5)
+    rubocop (1.51.0)
+      json (~> 2.3)
+      parallel (~> 1.10)
+      parser (>= 3.2.0.0)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8, < 3.0)
+      rexml (>= 3.2.5, < 4.0)
+      rubocop-ast (>= 1.28.0, < 2.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 2.4.0, < 3.0)
+    rubocop-ast (1.28.1)
+      parser (>= 3.2.1.0)
+    rubocop-performance (1.17.1)
+      rubocop (>= 1.7.0, < 2.0)
+      rubocop-ast (>= 0.4.0)
+    rubocop-rails (2.19.1)
+      activesupport (>= 4.2.0)
+      rack (>= 1.1)
+      rubocop (>= 1.33.0, < 2.0)
+    rubocop-shopify (2.13.0)
+      rubocop (~> 1.50)
     ruby-lsp (0.5.1)
       language_server-protocol (~> 3.17.0)
       sorbet-runtime
       syntax_tree (>= 6.1.1, < 7)
+    ruby-progressbar (1.13.0)
     samovar (2.1.4)
       console (~> 1.0)
       mapping (~> 1.0)
@@ -252,6 +282,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    unicode-display_width (2.4.2)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -275,6 +306,10 @@ DEPENDENCIES
   pg
   rack-mini-profiler
   rails!
+  rubocop
+  rubocop-performance
+  rubocop-rails
+  rubocop-shopify
   ruby-lsp
   sprockets-rails
   stimulus-rails
